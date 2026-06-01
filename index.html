@@ -199,20 +199,47 @@
         ];
 
         // 2. Meta Ads Stats Images Array
-        // IMPORTANT: Replace 'meta-stat-1.jpg' with your actual image file names inside your folder!
+        const META_BASE = 'https://raw.githubusercontent.com/Digitreams/digitreams-portfolio/main/screenshots/meta/';
         const META_STATS = [
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+1', title: 'E-Commerce ROAS 5.2x' },
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+2', title: 'Real Estate Leads: 250+' },
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+3', title: 'Dental Clinic Conversions' },
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+4', title: 'Local Business Traffic' }
+            { img: META_BASE + 'meta-01.PNG', title: 'Campaign Performance #1' },
+            { img: META_BASE + 'meta-02.PNG', title: 'Campaign Performance #2' },
+            { img: META_BASE + 'meta-03.PNG', title: 'Campaign Performance #3' },
+            { img: META_BASE + 'meta-04.PNG', title: 'Campaign Performance #4' },
+            { img: META_BASE + 'meta-05.PNG', title: 'Campaign Performance #5' },
+            { img: META_BASE + 'meta-06.PNG', title: 'Campaign Performance #6' },
+            { img: META_BASE + 'meta-07.PNG', title: 'Campaign Performance #7' },
+            { img: META_BASE + 'meta-08.PNG', title: 'Campaign Performance #8' },
+            { img: META_BASE + 'meta-09.PNG', title: 'Campaign Performance #9' },
+            { img: META_BASE + 'meta-10.PNG', title: 'Campaign Performance #10' },
+            { img: META_BASE + 'meta-11.PNG', title: 'Campaign Performance #11' },
+            { img: META_BASE + 'meta-12.PNG', title: 'Campaign Performance #12' },
+            { img: META_BASE + 'meta-13.PNG', title: 'Campaign Performance #13' },
+            { img: META_BASE + 'meta-14.PNG', title: 'Campaign Performance #14' },
+            { img: META_BASE + 'meta-15.PNG', title: 'Campaign Performance #15' },
+            { img: META_BASE + 'meta-16.PNG', title: 'Campaign Performance #16' },
+            { img: META_BASE + 'meta-17.PNG', title: 'Campaign Performance #17' },
+            { img: META_BASE + 'meta-18.PNG', title: 'Campaign Performance #18' },
+            { img: META_BASE + 'meta-19.PNG', title: 'Campaign Performance #19' },
+            { img: META_BASE + 'meta-20.PNG', title: 'Campaign Performance #20' },
+            { img: META_BASE + 'meta-21.PNG', title: 'Campaign Performance #21' },
+            { img: META_BASE + 'meta-22.PNG', title: 'Campaign Performance #22' },
+            { img: META_BASE + 'meta-23.PNG', title: 'Campaign Performance #23' },
+            { img: META_BASE + 'meta-24.PNG', title: 'Campaign Performance #24' },
+            { img: META_BASE + 'meta-25.PNG', title: 'Campaign Performance #25' }
         ];
 
         // 3. Google Ads Stats Images Array
-        // IMPORTANT: Replace 'google-stat-1.jpg' with your actual image file names inside your folder!
+        const GOOGLE_BASE = 'https://raw.githubusercontent.com/Digitreams/digitreams-portfolio/main/screenshots/google/';
         const GOOGLE_STATS = [
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Google+Stat+1', title: 'Search Campaign CTR 14%' },
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Google+Stat+2', title: 'PPC Conversion Rate 8%' },
-            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Google+Stat+3', title: 'Low CPA Achievement' }
+            { img: GOOGLE_BASE + 'google-01.jpeg', title: 'Search Campaign Results #1' },
+            { img: GOOGLE_BASE + 'google-02.jpeg', title: 'Search Campaign Results #2' },
+            { img: GOOGLE_BASE + 'google-03.jpeg', title: 'Search Campaign Results #3' },
+            { img: GOOGLE_BASE + 'google-04.jpeg', title: 'Search Campaign Results #4' },
+            { img: GOOGLE_BASE + 'google-05.jpeg', title: 'Search Campaign Results #5' },
+            { img: GOOGLE_BASE + 'google-06.jpeg', title: 'Search Campaign Results #6' },
+            { img: GOOGLE_BASE + 'google-07.jpeg', title: 'Search Campaign Results #7' },
+            { img: GOOGLE_BASE + 'google-08.jpeg', title: 'Search Campaign Results #8' },
+            { img: GOOGLE_BASE + 'google-09.jpeg', title: 'Search Campaign Results #9' }
         ];
 
         // Application State
@@ -245,7 +272,7 @@
 
             } else if (currentTab === 'meta') {
                 // Render Meta Stats Images
-                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto"; // Larger grid for stats
+                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-6xl mx-auto";
                 META_STATS.forEach((stat, index) => {
                     const card = document.createElement('div');
                     card.className = `bg-[#1f2833]/40 border border-blue-500/30 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-blue-500 animate-fade-in`;
@@ -262,7 +289,7 @@
 
             } else if (currentTab === 'google') {
                 // Render Google Stats Images
-                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto"; // Larger grid for stats
+                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-6xl mx-auto";
                 GOOGLE_STATS.forEach((stat, index) => {
                     const card = document.createElement('div');
                     card.className = `bg-[#1f2833]/40 border border-green-500/30 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-green-500 animate-fade-in`;
