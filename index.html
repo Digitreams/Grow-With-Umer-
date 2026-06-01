@@ -9,11 +9,33 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .brand-font { font-family: 'Poppins', sans-serif; }
-        .filter-btn.active { background-color: #f59e0b !important; color: #000000 !important; font-weight: 700; }
+        
+        /* Main Tab Active State */
+        .main-tab.active { 
+            background-color: #f59e0b !important; 
+            color: #000000 !important; 
+            border-color: #f59e0b !important;
+        }
+        
+        /* Sub Filter Active State */
+        .ugc-btn.active { 
+            background-color: #ffffff !important; 
+            color: #000000 !important; 
+        }
+
+        /* Smooth fade in for grid items */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
     </style>
 </head>
 <body class="bg-[#0b0c10] text-gray-300 antialiased">
 
+    <!-- Navigation -->
     <nav class="container mx-auto px-6 py-5 sticky top-0 bg-[#0b0c10]/90 backdrop-blur-sm z-50 border-b border-amber-500/10">
         <div class="flex justify-between items-center md:block relative">
             <div class="w-full text-center md:text-left md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2">
@@ -29,6 +51,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="container mx-auto px-6 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center justify-between">
         <div class="md:w-1/2 mt-12 md:mt-0 text-center md:text-left">
             <span class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider">
@@ -41,7 +64,7 @@
                 With 5 years of proven expertise, I help businesses scale globally using data-driven Meta/Google Ads and high-converting AI UGC content. Let's build your conversion engine.
             </p>
             <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-5">
-                <a href="#portfolio" class="bg-amber-500 text-black px-8 py-4 rounded-full font-bold hover:bg-amber-600 transition shadow-xl text-lg text-center tracking-wide">Portfolio</a>
+                <a href="#portfolio" class="bg-amber-500 text-black px-8 py-4 rounded-full font-bold hover:bg-amber-600 transition shadow-xl text-lg text-center tracking-wide">Explore Portfolio</a>
                 <a href="https://wa.me/923140063995?text=Hi%20Umer,%20I%20want%20to%20book%20a%20Free%2015-Min%20Strategy%20Call." target="_blank" class="bg-transparent border-2 border-gray-700 text-white px-8 py-4 rounded-full font-bold hover:border-amber-500 hover:text-amber-500 transition text-lg text-center tracking-wide">Book a Call</a>
             </div>
         </div>
@@ -53,6 +76,7 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="bg-[#1f2833]/30 py-20 border-y border-gray-900">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12">
@@ -61,35 +85,47 @@
             </div>
             <div class="bg-[#1f2833]/60 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-800 space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                    I am <strong class="text-white">Umer</strong>, a digital growth architect and elite <strong class="text-white">Performance Marketing Expert</strong> with 5 years of proven experience in transforming ad spend into predictable revenue. Specializing in high-converting <strong class="text-amber-400">AI UGC Ads</strong>, data-backed <strong class="text-white">Meta Ads (Facebook & Instagram Advertising)</strong>, and highly optimized <strong class="text-white">Google Ads (PPC & Search)</strong> campaigns, I bridge the gap between creative visual storytelling and mathematical scaling.
+                    I am <strong class="text-white">Umer</strong>, a digital growth architect and elite <strong class="text-white">Performance Marketing Expert</strong> with 5 years of proven experience in transforming ad spend into predictable revenue. Specializing in high-converting <strong class="text-amber-400">AI UGC Ads</strong>, data-backed <strong class="text-white">Meta Ads (Facebook & Instagram Advertising)</strong>, and highly optimized <strong class="text-white">Google Ads (PPC & Search)</strong> campaigns.
                 </p>
                 <p>
-                    My workflow leverages advanced artificial intelligence generative systems alongside top-tier creative tools—including <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">CapCut Pro</span>, <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">Canva</span>, <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">Affinity Designer</span>, and <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">ElevenLabs</span>. This stack enables the rapid deployment of cross-border ad creatives designed natively for conversion, ensuring local and international campaigns transcend standard ROI metrics.
+                    My workflow leverages advanced artificial intelligence generative systems alongside top-tier creative tools—including <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">CapCut Pro</span>, <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">Canva</span>, <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">Affinity Designer</span>, and <span class="bg-black/40 text-amber-400 px-2 py-0.5 rounded font-mono text-base">ElevenLabs</span>.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Master Portfolio Section -->
     <section id="portfolio" class="container mx-auto px-6 py-20">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Portfolio</h2>
-            <p class="text-gray-400 max-w-md mx-auto text-lg">Filter and view my high-converting ad creatives across different niches.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Results & Creatives Engine</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-lg mb-10">Explore my AI-generated video creatives and real-world performance statistics across Meta and Google Ads.</p>
             
-            <div class="flex flex-wrap justify-center gap-3 mt-8">
-                <button onclick="filterPortfolio('all')" id="btn-all" class="filter-btn active bg-amber-500 text-black px-6 py-3 rounded-full font-bold text-base shadow-md transition whitespace-nowrap">All Work</button>
-                <button onclick="filterPortfolio('meta')" id="btn-meta" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Meta Ads</button>
-                <button onclick="filterPortfolio('google')" id="btn-google" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Google Ads</button>
-                <button onclick="filterPortfolio('pet')" id="btn-pet" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Pet Clinic</button>
-                <button onclick="filterPortfolio('dental')" id="btn-dental" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Healthcare</button>
-                <button onclick="filterPortfolio('realestate')" id="btn-realestate" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Real Estate</button>
-                <button onclick="filterPortfolio('digital')" id="btn-digital" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">International</button>
+            <!-- Tier 1: Main 3 Tabs -->
+            <div class="flex flex-col md:flex-row justify-center gap-4 mb-8">
+                <button onclick="switchTab('ugc')" id="tab-ugc" class="main-tab active bg-[#1f2833]/80 border-2 border-transparent text-white px-8 py-4 rounded-xl font-bold text-lg shadow-md transition duration-300 w-full md:w-auto">🎥 AI UGC Ads</button>
+                
+                <button onclick="switchTab('meta')" id="tab-meta" class="main-tab bg-[#1f2833]/80 border-2 border-gray-700 text-gray-300 hover:text-white hover:border-amber-500 px-8 py-4 rounded-xl font-bold text-lg transition duration-300 w-full md:w-auto">📈 Meta Ads Stats</button>
+                
+                <button onclick="switchTab('google')" id="tab-google" class="main-tab bg-[#1f2833]/80 border-2 border-gray-700 text-gray-300 hover:text-white hover:border-amber-500 px-8 py-4 rounded-xl font-bold text-lg transition duration-300 w-full md:w-auto">📊 Google Ads Stats</button>
+            </div>
+
+            <!-- Tier 2: UGC Sub-Categories (Only visible when UGC is selected) -->
+            <div id="ugc-filters" class="flex flex-wrap justify-center gap-3 mt-4 transition-all duration-300">
+                <button onclick="filterUgc('all')" id="btn-all" class="ugc-btn active bg-[#1f2833]/60 border border-gray-600 text-gray-300 hover:text-white px-5 py-2 rounded-full font-semibold text-sm transition whitespace-nowrap">All Videos</button>
+                <button onclick="filterUgc('pet')" id="btn-pet" class="ugc-btn bg-[#1f2833]/60 border border-gray-600 text-gray-300 hover:text-white px-5 py-2 rounded-full font-semibold text-sm transition whitespace-nowrap">Pet Clinic</button>
+                <button onclick="filterUgc('dental')" id="btn-dental" class="ugc-btn bg-[#1f2833]/60 border border-gray-600 text-gray-300 hover:text-white px-5 py-2 rounded-full font-semibold text-sm transition whitespace-nowrap">Healthcare / Dental</button>
+                <button onclick="filterUgc('realestate')" id="btn-realestate" class="ugc-btn bg-[#1f2833]/60 border border-gray-600 text-gray-300 hover:text-white px-5 py-2 rounded-full font-semibold text-sm transition whitespace-nowrap">Real Estate</button>
+                <button onclick="filterUgc('digital')" id="btn-digital" class="ugc-btn bg-[#1f2833]/60 border border-gray-600 text-gray-300 hover:text-white px-5 py-2 rounded-full font-semibold text-sm transition whitespace-nowrap">International / Digital</button>
             </div>
         </div>
 
+        <!-- Dynamic Content Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto" id="portfolio-grid">
-            </div>
+            <!-- Content will be injected here via JavaScript -->
+        </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="bg-black text-white py-20">
         <div class="container mx-auto px-6 max-w-4xl text-center">
             <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to Explode Your Brand's Growth?</h2>
@@ -112,10 +148,10 @@
         </div>
     </section>
 
+    <!-- JavaScript Logic -->
     <script>
+        // Data Configuration
         const CAT_LABELS = {
-            meta: 'Meta Ads',
-            google: 'Google Ads',
             digital: 'Digital / International',
             beauty: 'Beauty Salon',
             dental: 'Healthcare & Dental',
@@ -130,7 +166,7 @@
             realestate: 'Real Estate'
         };
 
-        // Your exact live video deliverables data
+        // 1. YouTube Videos Array (AI UGC Ads)
         const VIDEOS = [
             {id:'8Txro6p0dwo',cat:'digital',title:'Digitreams Overview'},
             {id:'EKBNu53h1mY',cat:'digital',title:'Professional Marketing Intro'},
@@ -162,46 +198,133 @@
             {id:'t2PmGfLd_Vw',cat:'restaurant',title:'Culinary Excellence Promo'}
         ];
 
-        function renderPortfolio(categoryFilter = 'all') {
+        // 2. Meta Ads Stats Images Array
+        // IMPORTANT: Replace 'meta-stat-1.jpg' with your actual image file names inside your folder!
+        const META_STATS = [
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+1', title: 'E-Commerce ROAS 5.2x' },
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+2', title: 'Real Estate Leads: 250+' },
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+3', title: 'Dental Clinic Conversions' },
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Meta+Stat+4', title: 'Local Business Traffic' }
+        ];
+
+        // 3. Google Ads Stats Images Array
+        // IMPORTANT: Replace 'google-stat-1.jpg' with your actual image file names inside your folder!
+        const GOOGLE_STATS = [
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Google+Stat+1', title: 'Search Campaign CTR 14%' },
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Google+Stat+2', title: 'PPC Conversion Rate 8%' },
+            { img: 'https://placehold.co/600x400/1f2833/f59e0b?text=Google+Stat+3', title: 'Low CPA Achievement' }
+        ];
+
+        // Application State
+        let currentTab = 'ugc'; // Can be 'ugc', 'meta', or 'google'
+        let currentUgcCategory = 'all';
+
+        // Core Render Function
+        function renderContent() {
             const grid = document.getElementById('portfolio-grid');
-            grid.innerHTML = '';
+            grid.innerHTML = ''; // Clear current grid
 
-            const filtered = VIDEOS.filter(v => categoryFilter === 'all' || v.cat === categoryFilter);
+            if (currentTab === 'ugc') {
+                // Render YouTube Videos
+                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto";
+                const filteredVideos = VIDEOS.filter(v => currentUgcCategory === 'all' || v.cat === currentUgcCategory);
+                
+                filteredVideos.forEach((v, index) => {
+                    const card = document.createElement('div');
+                    card.className = `bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50 animate-fade-in`;
+                    card.style.animationDelay = `${index * 0.05}s`;
+                    card.innerHTML = `
+                        <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative shadow-inner">
+                            <iframe class="absolute inset-0 w-full h-full border-0" src="https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="${v.title}"></iframe>
+                        </div>
+                        <h3 class="text-white font-bold text-base px-2 mb-1 truncate">${v.title}</h3>
+                        <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">${CAT_LABELS[v.cat] || 'UGC Ads'}</span>
+                    `;
+                    grid.appendChild(card);
+                });
 
-            filtered.forEach(v => {
-                const card = document.createElement('div');
-                card.className = 'bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50';
-                card.innerHTML = `
-                    <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative shadow-inner">
-                        <iframe class="absolute inset-0 w-full h-full border-0" src="https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="${v.title}"></iframe>
-                    </div>
-                    <h3 class="text-white font-bold text-base px-2 mb-1 truncate">${v.title}</h3>
-                    <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">${CAT_LABELS[v.cat] || 'UGC Ads'}</span>
-                `;
-                grid.appendChild(card);
-            });
+            } else if (currentTab === 'meta') {
+                // Render Meta Stats Images
+                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto"; // Larger grid for stats
+                META_STATS.forEach((stat, index) => {
+                    const card = document.createElement('div');
+                    card.className = `bg-[#1f2833]/40 border border-blue-500/30 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-blue-500 animate-fade-in`;
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    card.innerHTML = `
+                        <div class="aspect-video w-full bg-[#0b0c10] rounded-2xl overflow-hidden mb-4 relative flex items-center justify-center">
+                            <img src="${stat.img}" alt="${stat.title}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-white font-bold text-lg px-2 mb-1 text-center">${stat.title}</h3>
+                        <div class="text-center"><span class="bg-blue-500/20 text-blue-400 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full">Meta Ads Performance</span></div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+            } else if (currentTab === 'google') {
+                // Render Google Stats Images
+                grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto"; // Larger grid for stats
+                GOOGLE_STATS.forEach((stat, index) => {
+                    const card = document.createElement('div');
+                    card.className = `bg-[#1f2833]/40 border border-green-500/30 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-green-500 animate-fade-in`;
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    card.innerHTML = `
+                        <div class="aspect-video w-full bg-[#0b0c10] rounded-2xl overflow-hidden mb-4 relative flex items-center justify-center">
+                            <img src="${stat.img}" alt="${stat.title}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-white font-bold text-lg px-2 mb-1 text-center">${stat.title}</h3>
+                        <div class="text-center"><span class="bg-green-500/20 text-green-400 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full">Google Ads Performance</span></div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
         }
 
-        function filterPortfolio(category) {
-            // Update button styles
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active', 'bg-amber-500', 'text-black');
+        // Switch Main Tabs (UGC vs Meta vs Google)
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // 1. Update Main Button Styles
+            document.querySelectorAll('.main-tab').forEach(btn => {
+                btn.classList.remove('active', 'border-amber-500');
+                btn.classList.add('border-gray-700', 'text-gray-300');
+            });
+            const activeTabBtn = document.getElementById(`tab-${tab}`);
+            activeTabBtn.classList.add('active');
+
+            // 2. Hide or Show UGC Filters
+            const ugcFilters = document.getElementById('ugc-filters');
+            if (tab === 'ugc') {
+                ugcFilters.style.display = 'flex';
+            } else {
+                ugcFilters.style.display = 'none';
+            }
+
+            // 3. Render content based on selected tab
+            renderContent();
+        }
+
+        // Filter UGC Sub-categories
+        function filterUgc(category) {
+            currentUgcCategory = category;
+
+            // Update sub-filter styles
+            document.querySelectorAll('.ugc-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-[#ffffff]', 'text-black');
                 btn.classList.add('bg-[#1f2833]/60', 'text-gray-300');
             });
 
             const activeBtn = document.getElementById(`btn-${category}`);
             if (activeBtn) {
-                activeBtn.classList.add('active');
+                activeBtn.classList.add('active', 'bg-[#ffffff]', 'text-black');
+                activeBtn.classList.remove('bg-[#1f2833]/60', 'text-gray-300');
             }
 
-            // Render matching videos
-            renderPortfolio(category);
+            renderContent();
         }
 
-        // Initial render when script loads
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            renderPortfolio('all');
+            switchTab('ugc'); // Start with UGC tab selected
         });
     </script>
 </body>
