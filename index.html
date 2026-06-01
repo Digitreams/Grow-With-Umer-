@@ -9,11 +9,11 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .brand-font { font-family: 'Poppins', sans-serif; }
+        .filter-btn.active { background-color: #f59e0b !important; color: #000000 !important; font-weight: 700; }
     </style>
 </head>
 <body class="bg-[#0b0c10] text-gray-300 antialiased">
 
-    <!-- Navigation Bar -->
     <nav class="container mx-auto px-6 py-5 sticky top-0 bg-[#0b0c10]/90 backdrop-blur-sm z-50 border-b border-amber-500/10">
         <div class="flex justify-between items-center md:block relative">
             <div class="w-full text-center md:text-left md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2">
@@ -21,7 +21,6 @@
                     Grow With <span class="text-amber-500">Umer</span>
                 </a>
             </div>
-            <!-- UX Fix: Changed link text from "About" to "Behind the Numbers" -->
             <div class="hidden md:flex space-x-8 items-center justify-end text-gray-400 font-medium relative z-10">
                 <a href="#about" class="hover:text-amber-500 transition">Behind the Numbers</a>
                 <a href="#portfolio" class="hover:text-amber-500 transition">Portfolio</a>
@@ -30,7 +29,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="container mx-auto px-6 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center justify-between">
         <div class="md:w-1/2 mt-12 md:mt-0 text-center md:text-left">
             <span class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-500 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider">
@@ -55,7 +53,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="bg-[#1f2833]/30 py-20 border-y border-gray-900">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12">
@@ -73,66 +70,24 @@
         </div>
     </section>
 
-    <!-- [NEW] Interactive Javascript Portfolio Section with Industry Filters -->
     <section id="portfolio" class="container mx-auto px-6 py-20">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Portfolio</h2>
             <p class="text-gray-400 max-w-md mx-auto text-lg">Filter and view my high-converting ad creatives across different niches.</p>
             
-            <!-- Dynamic Filter Buttons (Bigger, Clickable UI) -->
             <div class="flex flex-wrap justify-center gap-3 mt-8">
-                <button onclick="filterPortfolio('all')" id="btn-all" class="filter-btn bg-amber-500 text-black px-6 py-3 rounded-full font-bold text-base shadow-md transition whitespace-nowrap">All Work</button>
-                <button onclick="filterPortfolio('pet-clinic')" id="btn-pet-clinic" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Pet Clinic</button>
-                <button onclick="filterPortfolio('healthcare')" id="btn-healthcare" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Healthcare</button>
-                <button onclick="filterPortfolio('real-estate')" id="btn-real-estate" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Real Estate</button>
-                <button onclick="filterPortfolio('international')" id="btn-international" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">International</button>
+                <button onclick="filterPortfolio('all')" id="btn-all" class="filter-btn active bg-amber-500 text-black px-6 py-3 rounded-full font-bold text-base shadow-md transition whitespace-nowrap">All Work</button>
+                <button onclick="filterPortfolio('pet')" id="btn-pet" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Pet Clinic</button>
+                <button onclick="filterPortfolio('dental')" id="btn-dental" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Healthcare / Dental</button>
+                <button onclick="filterPortfolio('realestate')" id="btn-realestate" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Real Estate</button>
+                <button onclick="filterPortfolio('digital')" id="btn-digital" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">International / Digital</button>
             </div>
         </div>
 
-        <!-- UGC Videos Grid Layout (Mobile Responsive 9:16 View) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto" id="portfolio-grid">
-            
-            <!-- Video Card 1: Pet Clinic -->
-            <div class="portfolio-item pet-clinic bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50">
-                <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative">
-                    <!-- Replace the src with your actual YouTube embed link when available -->
-                    <div class="absolute inset-0 flex items-center justify-center text-gray-600 bg-gray-900 text-sm p-4 text-center">Pet Clinic UGC Video Placeholder</div>
-                </div>
-                <h3 class="text-white font-bold text-lg px-2 mb-1">Pet Clinic Ad Campaign</h3>
-                <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">Pet Clinic</span>
             </div>
-
-            <!-- Video Card 2: Healthcare -->
-            <div class="portfolio-item healthcare bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50">
-                <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-gray-600 bg-gray-900 text-sm p-4 text-center">Healthcare Conversion Ad</div>
-                </div>
-                <h3 class="text-white font-bold text-lg px-2 mb-1">Medical Center UGC</h3>
-                <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">Healthcare</span>
-            </div>
-
-            <!-- Video Card 3: Real Estate -->
-            <div class="portfolio-item real-estate bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50">
-                <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-gray-600 bg-gray-900 text-sm p-4 text-center">Real Estate High-Ticket Lead Gen</div>
-                </div>
-                <h3 class="text-white font-bold text-lg px-2 mb-1">Luxury Property Walkthrough</h3>
-                <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">Real Estate</span>
-            </div>
-
-            <!-- Video Card 4: International (English UGC) -->
-            <div class="portfolio-item international bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50">
-                <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-gray-600 bg-gray-900 text-sm p-4 text-center">US/UK Market Video Ad</div>
-                </div>
-                <h3 class="text-white font-bold text-lg px-2 mb-1">E-commerce English UGC</h3>
-                <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">International</span>
-            </div>
-
-        </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="bg-black text-white py-20">
         <div class="container mx-auto px-6 max-w-4xl text-center">
             <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to Explode Your Brand's Growth?</h2>
@@ -155,39 +110,95 @@
         </div>
     </section>
 
-    <!-- JavaScript code for smooth interactive filtering -->
     <script>
-        function filterPortfolio(category) {
-            // Get all portfolio items
-            const items = document.querySelectorAll('.portfolio-item');
-            // Get all filter buttons
-            const buttons = document.querySelectorAll('.filter-btn');
+        const CAT_LABELS = {
+            digital: 'Digital / International',
+            beauty: 'Beauty Salon',
+            dental: 'Healthcare & Dental',
+            ecommerce: 'E-Commerce',
+            gym: 'Gym / Fitness',
+            homeimprove: 'Home Improvement',
+            hvac: 'HVAC',
+            pet: 'Pet Clinic',
+            plumber: 'Plumber',
+            roofing: 'Roofing',
+            restaurant: 'Restaurant',
+            realestate: 'Real Estate'
+        };
 
-            // Reset all buttons to default dark style
+        // Your exact live video deliverables data
+        const VIDEOS = [
+            {id:'8Txro6p0dwo',cat:'digital',title:'Digitreams Overview'},
+            {id:'EKBNu53h1mY',cat:'digital',title:'Professional Marketing Intro'},
+            {id:'qNESLzn6KXQ',cat:'digital',title:'AI Powered Ad Strategy'},
+            {id:'DCt2ZQOhraY',cat:'digital',title:'Digital Growth Solutions'},
+            {id:'M3iiQQrePGY',cat:'digital',title:'Agency Process & ROI'},
+            {id:'mVy1TKNeqLg',cat:'digital',title:'Service Showcase'},
+            {id:'nLNnyD99zV0',cat:'beauty',title:'Beauty Salon Experience'},
+            {id:'LKD-oWE_nfs',cat:'beauty',title:'Premium Salon UGC Ad'},
+            {id:'8mWhPXaCjg0',cat:'beauty',title:'Skincare & Beauty Hook'},
+            {id:'hLbLnSWp9sw',cat:'beauty',title:'Salon Transformation'},
+            {id:'lR5N7SEBKsA',cat:'dental',title:'Dental Clinic Patient Story'},
+            {id:'2G41X6qL-X0',cat:'dental',title:'Professional Dental Care'},
+            {id:'2EmMELeJxCs',cat:'dental',title:'Smile Restoration UGC'},
+            {id:'MFMn8J6DXoM',cat:'ecommerce',title:'Premium Beauty Serum Ad'},
+            {id:'SAsS9kaa0Bs',cat:'gym',title:'Fitness & Gym Motivation'},
+            {id:'54dRXXWMpmU',cat:'gym',title:'Gym Membership UGC'},
+            {id:'dRWDp-n2gj4',cat:'workout Results Showcase'},
+            {id:'ExUw_0zR1jE',cat:'homeimprove',title:'Home Improvement Service'},
+            {id:'B4ww4w7q66U',cat:'hvac',title:'HVAC Maintenance Promo'},
+            {id:'V6mApYCAfNo',cat:'pet',title:'Pet Clinic Care Story'},
+            {id:'RsgfbPZHZWE',cat:'pet',title:'Veterinary Service UGC'},
+            {id:'6KXJRqwoPBg',cat:'pet',title:'Pet Wellness Campaign'},
+            {id:'7xQaKjaqWpQ',cat:'plumber',title:'Emergency Plumbing Ad'},
+            {id:'Ju0UejbhSvk',cat:'plumber',title:'Professional Plumbing Care'},
+            {id:'TVJdL_yelE0',cat:'roofing',title:'Roofing Solutions UGC'},
+            {id:'kw2VSnus9r4',cat:'restaurant',title:'Restaurant Experience Ad'},
+            {id:'s95pkfhW2WE',cat:'restaurant',title:'Foodie Recommendation'},
+            {id:'t2PmGfLd_Vw',cat:'restaurant',title:'Culinary Excellence Promo'}
+        ];
+
+        function renderPortfolio(categoryFilter = 'all') {
+            const grid = document.getElementById('portfolio-grid');
+            grid.innerHTML = '';
+
+            const filtered = VIDEOS.filter(v => categoryFilter === 'all' || v.cat === categoryFilter);
+
+            filtered.forEach(v => {
+                const card = document.createElement('div');
+                card.className = 'bg-[#1f2833]/40 border border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition duration-300 hover:border-amber-500/50';
+                card.innerHTML = `
+                    <div class="aspect-[9/16] w-full bg-black rounded-2xl overflow-hidden mb-4 relative shadow-inner">
+                        <iframe class="absolute inset-0 w-full h-full border-0" src="https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="${v.title}"></iframe>
+                    </div>
+                    <h3 class="text-white font-bold text-base px-2 mb-1 truncate">${v.title}</h3>
+                    <span class="text-amber-500 text-xs uppercase tracking-wider font-semibold px-2">${CAT_LABELS[v.cat] || 'UGC Ads'}</span>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterPortfolio(category) {
+            // Update button styles
+            const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
-                btn.classList.remove('bg-amber-500', 'text-black');
+                btn.classList.remove('active', 'bg-amber-500', 'text-black');
                 btn.classList.add('bg-[#1f2833]/60', 'text-gray-300');
             });
 
-            // Set active button style
             const activeBtn = document.getElementById(`btn-${category}`);
             if (activeBtn) {
-                activeBtn.classList.remove('bg-[#1f2833]/60', 'text-gray-300');
-                activeBtn.classList.add('bg-amber-500', 'text-black');
+                activeBtn.classList.add('active');
             }
 
-            // Show/Hide Items with smooth fade transition
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'flex';
-                    setTimeout(() => item.style.opacity = '1', 10);
-                } else {
-                    item.style.opacity = '0';
-                    setTimeout(() => item.style.display = 'none', 300);
-                }
-            });
+            // Render matching videos
+            renderPortfolio(category);
         }
-    </script>
 
+        // Initial render when script loads
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPortfolio('all');
+        });
+    </script>
 </body>
 </html>
