@@ -77,10 +77,12 @@
             
             <div class="flex flex-wrap justify-center gap-3 mt-8">
                 <button onclick="filterPortfolio('all')" id="btn-all" class="filter-btn active bg-amber-500 text-black px-6 py-3 rounded-full font-bold text-base shadow-md transition whitespace-nowrap">All Work</button>
+                <button onclick="filterPortfolio('meta')" id="btn-meta" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Meta Ads</button>
+                <button onclick="filterPortfolio('google')" id="btn-google" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Google Ads</button>
                 <button onclick="filterPortfolio('pet')" id="btn-pet" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Pet Clinic</button>
-                <button onclick="filterPortfolio('dental')" id="btn-dental" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Healthcare / Dental</button>
+                <button onclick="filterPortfolio('dental')" id="btn-dental" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Healthcare</button>
                 <button onclick="filterPortfolio('realestate')" id="btn-realestate" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">Real Estate</button>
-                <button onclick="filterPortfolio('digital')" id="btn-digital" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">International / Digital</button>
+                <button onclick="filterPortfolio('digital')" id="btn-digital" class="filter-btn bg-[#1f2833]/60 text-gray-300 hover:text-amber-500 px-6 py-3 rounded-full font-bold text-base transition whitespace-nowrap">International</button>
             </div>
         </div>
 
@@ -112,6 +114,8 @@
 
     <script>
         const CAT_LABELS = {
+            meta: 'Meta Ads',
+            google: 'Google Ads',
             digital: 'Digital / International',
             beauty: 'Beauty Salon',
             dental: 'Healthcare & Dental',
@@ -144,7 +148,7 @@
             {id:'MFMn8J6DXoM',cat:'ecommerce',title:'Premium Beauty Serum Ad'},
             {id:'SAsS9kaa0Bs',cat:'gym',title:'Fitness & Gym Motivation'},
             {id:'54dRXXWMpmU',cat:'gym',title:'Gym Membership UGC'},
-            {id:'dRWDp-n2gj4',cat:'workout Results Showcase'},
+            {id:'dRWDp-n2gj4',cat:'gym',title:'Workout Results Showcase'},
             {id:'ExUw_0zR1jE',cat:'homeimprove',title:'Home Improvement Service'},
             {id:'B4ww4w7q66U',cat:'hvac',title:'HVAC Maintenance Promo'},
             {id:'V6mApYCAfNo',cat:'pet',title:'Pet Clinic Care Story'},
